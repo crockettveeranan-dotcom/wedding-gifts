@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jade-Wu & Darren</title>
+  <meta name="theme-color" content="#f8f3ee">
+
+  <title>Wedding Gifts | Darren & Jade-Wu</title>
 
   <style>
     * {
@@ -12,113 +15,364 @@
 
     body {
       margin: 0;
-      background: #f8f7f4;
-      color: #292826;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(135deg, #faf7f2, #f3ebe3);
+      color: #3d3530;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 35px 20px 50px;
     }
 
     .card {
-      width: 100%;
-      max-width: 520px;
-      background: #ffffff;
-      padding: 50px 35px;
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 24px;
+      padding: 38px 28px;
+      box-shadow: 0 12px 40px rgba(70, 50, 40, 0.12);
       text-align: center;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    }
+
+    .rings {
+      font-size: 42px;
+      margin-bottom: 8px;
     }
 
     h1 {
-      font-family: Georgia, serif;
-      font-weight: 400;
-      font-size: 32px;
-      margin: 0 0 12px;
+      margin: 0;
+      font-size: 38px;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    .names {
+      margin-top: 10px;
+      font-size: 22px;
+      font-style: italic;
+    }
+
+    .divider {
+      width: 70px;
+      height: 1px;
+      background: #b9a28f;
+      margin: 25px auto;
     }
 
     .intro {
-      font-size: 15px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
       line-height: 1.7;
-      color: #666;
-      margin-bottom: 38px;
+      color: #625952;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-top: 30px;
+      padding: 25px 20px;
+      border-radius: 18px;
+      background: #faf7f3;
+    }
+
+    .main-section {
+      border: 1px solid #e5d8cc;
     }
 
     h2 {
-      font-size: 13px;
-      letter-spacing: 2px;
-      font-weight: 500;
-      margin: 30px 0 15px;
+      margin: 0 0 8px;
+      font-size: 25px;
+      font-weight: normal;
     }
 
-    .details {
-      background: #f8f7f4;
-      padding: 20px;
-      text-align: left;
-      line-height: 1.8;
+    .subtitle {
+      font-family: Arial, sans-serif;
       font-size: 14px;
+      color: #756b64;
+      margin-bottom: 22px;
     }
 
-    .details strong {
-      font-weight: 600;
+    .payee {
+      background: white;
+      border: 1px solid #e4dcd5;
+      border-radius: 14px;
+      padding: 18px;
+      margin: 15px 0;
+      text-align: left;
+    }
+
+    .payee-name {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+    .payid {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #5c5550;
+      word-break: break-word;
+      margin-bottom: 12px;
+    }
+
+    button {
+      border: none;
+      border-radius: 9px;
+      padding: 11px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+      background: #594a40;
+      color: white;
+      transition: opacity 0.2s ease;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    .copied {
+      background: #6f8064;
+    }
+
+    .qr {
+      margin: 25px auto 10px;
+      background: white;
+      padding: 14px;
+      border-radius: 14px;
+      width: fit-content;
+      border: 1px solid #e2d8cf;
+    }
+
+    .qr img {
+      width: 190px;
+      height: 190px;
+      display: block;
+    }
+
+    .qr-text {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #71675f;
+      margin-top: 10px;
+    }
+
+    details {
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 19px;
+      padding: 5px;
+      list-style-position: inside;
+    }
+
+    .bank-details {
+      margin-top: 20px;
+      background: white;
+      border-radius: 13px;
+      padding: 18px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .bank-details strong {
+      color: #403832;
     }
 
     .note {
-      margin-top: 35px;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
       font-size: 13px;
-      line-height: 1.7;
-      color: #777;
+      line-height: 1.6;
+      color: #746b64;
     }
 
-    .heart {
+    .footer {
       margin-top: 30px;
-      font-size: 18px;
+      font-size: 15px;
+      font-style: italic;
+      color: #766b63;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 18px 12px 35px;
+      }
+
+      .card {
+        padding: 30px 17px;
+        border-radius: 20px;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .names {
+        font-size: 19px;
+      }
+
+      .section {
+        padding: 22px 15px;
+      }
+
+      .qr img {
+        width: 170px;
+        height: 170px;
+      }
     }
   </style>
+
 </head>
 
 <body>
 
-  <div class="card">
+  <div class="container">
+    <div class="card">
 
-    <h1>Jade-Wu & Darren</h1>
+```
+  <div class="rings">💍</div>
 
-    <div class="intro">
-      Your presence is the greatest gift.<br>
-      If you'd like to contribute toward our future together,
-      we've included our payment details below.
+  <h1>Wedding Gifts</h1>
+
+  <div class="names">
+    Darren & Jade-Wu
+  </div>
+
+  <div class="divider"></div>
+
+  <p class="intro">
+    Your presence at our wedding means the world to us.
+    If you'd like to give us a gift, we've made it easy to contribute
+    towards our future together.
+  </p>
+
+  <!-- PAYID SECTION -->
+  <div class="section main-section">
+
+    <h2>💝 Give via PayID</h2>
+
+    <div class="subtitle">
+      Our preferred and easiest way to send a gift.
     </div>
 
-    <h2>PAYID</h2>
+    <div class="payee">
+      <div class="payee-name">Darren</div>
 
-    <div class="details">
-      <strong>Darren</strong><br>
-      darren.veeranan@gmail.com
-      <br><br>
+      <div class="payid" id="darrenPayID">
+        darren.veeranan@gmail.com
+      </div>
 
-      <strong>Jade-Wu</strong><br>
-      jadewcrockett@hotmail.com
+      <button onclick="copyPayID('darren.veeranan@gmail.com', this)">
+        📋 Copy PayID
+      </button>
     </div>
 
-    <h2>BANK TRANSFER</h2>
+    <div class="payee">
+      <div class="payee-name">Jade-Wu</div>
 
-    <div class="details">
-      <strong>Account name:</strong> Jade-Wu Crockett & Darren Veeranan<br>
-      <strong>BSB:</strong> 306511<br>
-      <strong>Account number:</strong> 0581738
+      <div class="payid" id="jadePayID">
+        jadewcrockett@hotmail.com
+      </div>
+
+      <button onclick="copyPayID('jadewcrockett@hotmail.com', this)">
+        📋 Copy PayID
+      </button>
+    </div>
+
+    <div class="qr">
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fcrockettveeranan-dotcom.github.io%2Fwedding-gifts%2F"
+        alt="QR code for wedding gift page"
+      >
+
+      <div class="qr-text">
+        Scan to open our wedding gift page
+      </div>
     </div>
 
     <div class="note">
-      Please include your name as the payment reference
-      so we know who your gift is from.
-      <br><br>
-      Thank you for being part of our special day.
+      After copying the PayID, open your banking app and start a PayID
+      payment. Please check that the recipient name shown by your bank
+      is correct before confirming the payment.
     </div>
 
-    <div class="heart">♡</div>
+  </div>
+
+
+  <!-- BANK TRANSFER SECTION -->
+  <div class="section">
+
+    <details>
+
+      <summary>🏦 Bank Transfer — Backup Option</summary>
+
+      <div class="bank-details">
+
+        <p>
+          <strong>Darren Veeranan</strong>
+        </p>
+
+        <p>
+          BSB: <strong>YOUR BSB</strong><br>
+          Account Number: <strong>YOUR ACCOUNT NUMBER</strong>
+        </p>
+
+        <hr>
+
+        <p>
+          <strong>Jade-Wu Crockett</strong>
+        </p>
+
+        <p>
+          BSB: <strong>YOUR BSB</strong><br>
+          Account Number: <strong>YOUR ACCOUNT NUMBER</strong>
+        </p>
+
+      </div>
+
+    </details>
+
+    <div class="note">
+      Please use PayID where possible. Bank transfer details are provided
+      as a backup option.
+    </div>
 
   </div>
+
+
+  <div class="footer">
+    Thank you for helping us start our next chapter together. ❤️
+  </div>
+
+</div>
+```
+
+  </div>
+
+  <script>
+    function copyPayID(payID, button) {
+      navigator.clipboard.writeText(payID).then(function () {
+
+        const originalText = button.innerHTML;
+
+        button.innerHTML = "✓ PayID Copied!";
+        button.classList.add("copied");
+
+        setTimeout(function () {
+          button.innerHTML = originalText;
+          button.classList.remove("copied");
+        }, 2000);
+
+      }).catch(function () {
+        alert("Please copy this PayID manually: " + payID);
+      });
+    }
+  </script>
 
 </body>
 </html>
