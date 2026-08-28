@@ -15,30 +15,29 @@
 
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: linear-gradient(135deg, #faf7f2, #f3ebe3);
-      color: #3d3530;
       min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(135deg, #faf7f2, #eee4da);
+      color: #3d3530;
     }
 
     .container {
-      width: 100%;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 35px 20px 50px;
+      max-width: 700px;
+      margin: auto;
+      padding: 35px 18px 50px;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255,255,255,0.96);
       border-radius: 24px;
-      padding: 38px 28px;
-      box-shadow: 0 12px 40px rgba(70, 50, 40, 0.12);
+      padding: 40px 25px;
       text-align: center;
+      box-shadow: 0 12px 40px rgba(70,50,40,0.12);
     }
 
     .rings {
       font-size: 42px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     h1 {
@@ -63,26 +62,22 @@
 
     .intro {
       font-family: Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
       color: #625952;
+      line-height: 1.7;
+      font-size: 16px;
       margin-bottom: 30px;
     }
 
-    .section {
-      margin-top: 30px;
-      padding: 25px 20px;
-      border-radius: 18px;
+    .payid-section {
       background: #faf7f3;
-    }
-
-    .main-section {
-      border: 1px solid #e5d8cc;
+      border: 1px solid #e4d8cd;
+      border-radius: 18px;
+      padding: 25px 18px;
     }
 
     h2 {
       margin: 0 0 8px;
-      font-size: 25px;
+      font-size: 27px;
       font-weight: normal;
     }
 
@@ -97,34 +92,34 @@
       background: white;
       border: 1px solid #e4dcd5;
       border-radius: 14px;
-      padding: 18px;
+      padding: 20px;
       margin: 15px 0;
       text-align: left;
     }
 
     .payee-name {
-      font-size: 20px;
-      margin-bottom: 7px;
+      font-size: 21px;
+      margin-bottom: 8px;
     }
 
     .payid {
       font-family: Arial, sans-serif;
       font-size: 14px;
       color: #5c5550;
-      word-break: break-word;
-      margin-bottom: 12px;
+      word-break: break-all;
+      margin-bottom: 14px;
     }
 
     button {
+      width: 100%;
       border: none;
       border-radius: 9px;
-      padding: 11px 16px;
-      font-size: 14px;
+      padding: 13px;
+      font-size: 15px;
       cursor: pointer;
       font-family: Arial, sans-serif;
       background: #594a40;
       color: white;
-      transition: opacity 0.2s ease;
     }
 
     button:hover {
@@ -132,15 +127,20 @@
     }
 
     .copied {
-      background: #6f8064;
+      background: #718267;
+    }
+
+    .qr-title {
+      margin-top: 28px;
+      font-size: 20px;
     }
 
     .qr {
-      margin: 25px auto 10px;
+      display: inline-block;
       background: white;
       padding: 14px;
       border-radius: 14px;
-      width: fit-content;
+      margin-top: 12px;
       border: 1px solid #e2d8cf;
     }
 
@@ -157,34 +157,8 @@
       margin-top: 10px;
     }
 
-    details {
-      text-align: left;
-      margin-top: 10px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-size: 19px;
-      padding: 5px;
-      list-style-position: inside;
-    }
-
-    .bank-details {
-      margin-top: 20px;
-      background: white;
-      border-radius: 13px;
-      padding: 18px;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .bank-details strong {
-      color: #403832;
-    }
-
-    .note {
-      margin-top: 20px;
+    .instructions {
+      margin-top: 22px;
       font-family: Arial, sans-serif;
       font-size: 13px;
       line-height: 1.6;
@@ -204,8 +178,7 @@
       }
 
       .card {
-        padding: 30px 17px;
-        border-radius: 20px;
+        padding: 30px 16px;
       }
 
       h1 {
@@ -214,10 +187,6 @@
 
       .names {
         font-size: 19px;
-      }
-
-      .section {
-        padding: 22px 15px;
       }
 
       .qr img {
@@ -232,9 +201,10 @@
 <body>
 
   <div class="container">
-    <div class="card">
 
 ```
+<div class="card">
+
   <div class="rings">💍</div>
 
   <h1>Wedding Gifts</h1>
@@ -246,107 +216,79 @@
   <div class="divider"></div>
 
   <p class="intro">
-    Your presence at our wedding means the world to us.
-    If you'd like to give us a gift, we've made it easy to contribute
-    towards our future together.
+    Your presence at our wedding is the greatest gift of all.
+    If you'd like to contribute towards our future together,
+    you can send us a gift securely using PayID.
   </p>
 
-  <!-- PAYID SECTION -->
-  <div class="section main-section">
+  <div class="payid-section">
 
-    <h2>💝 Give via PayID</h2>
+    <h2>💝 Gift via PayID</h2>
 
     <div class="subtitle">
-      Our preferred and easiest way to send a gift.
+      Choose either PayID below.
     </div>
 
     <div class="payee">
-      <div class="payee-name">Darren</div>
 
-      <div class="payid" id="darrenPayID">
+      <div class="payee-name">
+        Darren
+      </div>
+
+      <div class="payid">
         darren.veeranan@gmail.com
       </div>
 
       <button onclick="copyPayID('darren.veeranan@gmail.com', this)">
-        📋 Copy PayID
+        📋 Copy Darren's PayID
       </button>
+
     </div>
 
     <div class="payee">
-      <div class="payee-name">Jade-Wu</div>
 
-      <div class="payid" id="jadePayID">
+      <div class="payee-name">
+        Jade-Wu
+      </div>
+
+      <div class="payid">
         jadewcrockett@hotmail.com
       </div>
 
       <button onclick="copyPayID('jadewcrockett@hotmail.com', this)">
-        📋 Copy PayID
+        📋 Copy Jade-Wu's PayID
       </button>
+
+    </div>
+
+    <div class="qr-title">
+      📱 Scan to Give a Gift
     </div>
 
     <div class="qr">
+
       <img
         src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fcrockettveeranan-dotcom.github.io%2Fwedding-gifts%2F"
-        alt="QR code for wedding gift page"
+        alt="QR code to open wedding gift page"
       >
 
       <div class="qr-text">
-        Scan to open our wedding gift page
+        Scan this QR code to open this page
       </div>
+
     </div>
 
-    <div class="note">
-      After copying the PayID, open your banking app and start a PayID
-      payment. Please check that the recipient name shown by your bank
-      is correct before confirming the payment.
+    <div class="instructions">
+      After copying the PayID, open your banking app and select
+      PayID as the payment method. Enter the PayID, then check that
+      the recipient name shown by your bank is correct before
+      confirming your gift.
     </div>
 
   </div>
-
-
-  <!-- BANK TRANSFER SECTION -->
-  <div class="section">
-
-    <details>
-
-      <summary>🏦 Bank Transfer — Backup Option</summary>
-
-      <div class="bank-details">
-
-        <p>
-          <strong>Darren Veeranan</strong>
-        </p>
-
-        <p>
-          BSB: <strong>YOUR BSB</strong><br>
-          Account Number: <strong>YOUR ACCOUNT NUMBER</strong>
-        </p>
-
-        <hr>
-
-        <p>
-          <strong>Jade-Wu Crockett</strong>
-        </p>
-
-        <p>
-          BSB: <strong>YOUR BSB</strong><br>
-          Account Number: <strong>YOUR ACCOUNT NUMBER</strong>
-        </p>
-
-      </div>
-
-    </details>
-
-    <div class="note">
-      Please use PayID where possible. Bank transfer details are provided
-      as a backup option.
-    </div>
-
-  </div>
-
 
   <div class="footer">
-    Thank you for helping us start our next chapter together. ❤️
+    Thank you for being part of our special day. ❤️
   </div>
 
 </div>
@@ -355,23 +297,29 @@
   </div>
 
   <script>
+
     function copyPayID(payID, button) {
-      navigator.clipboard.writeText(payID).then(function () {
+
+      navigator.clipboard.writeText(payID).then(function() {
 
         const originalText = button.innerHTML;
 
         button.innerHTML = "✓ PayID Copied!";
         button.classList.add("copied");
 
-        setTimeout(function () {
+        setTimeout(function() {
           button.innerHTML = originalText;
           button.classList.remove("copied");
         }, 2000);
 
-      }).catch(function () {
+      }).catch(function() {
+
         alert("Please copy this PayID manually: " + payID);
+
       });
+
     }
+
   </script>
 
 </body>
