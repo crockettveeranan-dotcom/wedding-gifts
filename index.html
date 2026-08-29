@@ -8,290 +8,72 @@
   <title>Wedding Gifts | Darren & Jade-Wu</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Georgia, "Times New Roman", serif;
-      background: linear-gradient(135deg, #faf7f2, #eee4da);
-      color: #3d3530;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 35px 18px 50px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.96);
-      border-radius: 24px;
-      padding: 40px 25px;
-      text-align: center;
-      box-shadow: 0 12px 40px rgba(70, 50, 40, 0.12);
-    }
-
-    .rings {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 38px;
-      font-weight: normal;
-      letter-spacing: 1px;
-    }
-
-    .names {
-      margin-top: 10px;
-      font-size: 22px;
-      font-style: italic;
-    }
-
-    .divider {
-      width: 70px;
-      height: 1px;
-      background: #b9a28f;
-      margin: 25px auto;
-    }
-
-    .intro {
-      font-family: Arial, sans-serif;
-      color: #625952;
-      line-height: 1.7;
-      font-size: 16px;
-      margin-bottom: 30px;
-    }
-
-    .payid-section {
-      background: #faf7f3;
-      border: 1px solid #e4d8cd;
-      border-radius: 18px;
-      padding: 25px 18px;
-    }
-
-    h2 {
-      margin: 0 0 8px;
-      font-size: 27px;
-      font-weight: normal;
-    }
-
-    .subtitle {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      color: #756b64;
-      margin-bottom: 22px;
-    }
-
-    .payee {
-      background: white;
-      border: 1px solid #e4dcd5;
-      border-radius: 14px;
-      padding: 20px;
-      margin: 15px 0;
-      text-align: left;
-    }
-
-    .payee-name {
-      font-size: 21px;
-      margin-bottom: 8px;
-    }
-
-    .payid {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      color: #5c5550;
-      word-break: break-all;
-      margin-bottom: 14px;
-    }
-
-    button {
-      width: 100%;
-      border: none;
-      border-radius: 9px;
-      padding: 13px;
-      font-size: 15px;
-      cursor: pointer;
-      font-family: Arial, sans-serif;
-      background: #594a40;
-      color: white;
-      transition: opacity 0.2s ease;
-    }
-
-    button:hover {
-      opacity: 0.85;
-    }
-
-    .copied {
-      background: #718267;
-    }
-
-    .instructions {
-      margin-top: 25px;
-      padding: 18px;
-      background: #f5eee7;
-      border-radius: 12px;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      line-height: 1.7;
-      color: #746b64;
-      text-align: left;
-    }
-
-    .instructions strong {
-      color: #4d433c;
-    }
-
-    .footer {
-      margin-top: 30px;
-      font-size: 15px;
-      font-style: italic;
-      color: #766b63;
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 18px 12px 35px;
-      }
-
-      .card {
-        padding: 30px 16px;
-      }
-
-      h1 {
-        font-size: 31px;
-      }
-
-      .names {
-        font-size: 19px;
-      }
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; font-family: Georgia, "Times New Roman", serif; background: linear-gradient(135deg, #faf7f2, #eee4da); color: #3d3530; }
+    .container { max-width: 700px; margin: auto; padding: 35px 18px 50px; }
+    .card { background: rgba(255,255,255,.96); border-radius: 24px; padding: 40px 25px; text-align: center; box-shadow: 0 12px 40px rgba(70,50,40,.12); }
+    .rings { font-size: 42px; margin-bottom: 10px; }
+    h1 { margin: 0; font-size: 38px; font-weight: normal; letter-spacing: 1px; }
+    .names { margin-top: 10px; font-size: 22px; font-style: italic; }
+    .divider { width: 70px; height: 1px; background: #b9a28f; margin: 25px auto; }
+    .intro { font-family: Arial,sans-serif; color: #625952; line-height: 1.7; font-size: 16px; margin-bottom: 30px; }
+    .payid-section { background: #faf7f3; border: 1px solid #e4d8cd; border-radius: 18px; padding: 25px 18px; }
+    h2 { margin: 0 0 8px; font-size: 27px; font-weight: normal; }
+    .subtitle { font-family: Arial,sans-serif; font-size: 14px; color: #756b64; margin-bottom: 22px; }
+    .payee { background: white; border: 1px solid #e4dcd5; border-radius: 14px; padding: 20px; margin: 15px 0; text-align: left; }
+    .payee-name { font-size: 21px; margin-bottom: 8px; }
+    .payid { font-family: Arial,sans-serif; font-size: 14px; color: #5c5550; word-break: break-all; margin-bottom: 14px; }
+    button { width: 100%; border: none; border-radius: 9px; padding: 13px; font-size: 15px; cursor: pointer; font-family: Arial,sans-serif; background: #594a40; color: white; transition: opacity .2s ease; }
+    button:hover { opacity: .85; }
+    .copied { background: #718267; }
+    .instructions { margin-top: 25px; padding: 18px; background: #f5eee7; border-radius: 12px; font-family: Arial,sans-serif; font-size: 13px; line-height: 1.7; color: #746b64; text-align: left; }
+    .instructions strong { color: #4d433c; }
+    .footer { margin-top: 30px; font-size: 15px; font-style: italic; color: #766b63; }
+    @media (max-width:480px) { .container { padding:18px 12px 35px; } .card { padding:30px 16px; } h1 { font-size:31px; } .names { font-size:19px; } }
   </style>
 </head>
-
 <body>
-
   <div class="container">
-
     <div class="card">
-
       <div class="rings">💍</div>
-
       <h1>Wedding Gifts</h1>
-
-      <div class="names">
-        Darren & Jade-Wu
-      </div>
-
+      <div class="names">Darren & Jade-Wu</div>
       <div class="divider"></div>
-
-      <p class="intro">
-        Your presence at our wedding is the greatest gift of all.
-        If you'd like to contribute towards our future together,
-        you can send us a gift securely using PayID.
-      </p>
-
+      <p class="intro">Your presence at our wedding is the greatest gift of all. If you'd like to contribute towards our future together, you can send us a gift securely using PayID.</p>
       <div class="payid-section">
-
         <h2>💝 Gift via PayID</h2>
-
-        <div class="subtitle">
-          Choose either PayID below.
-        </div>
-
-        <!-- DARREN -->
-
+        <div class="subtitle">Use the PayID below.</div>
         <div class="payee">
-
-          <div class="payee-name">
-            Darren
-          </div>
-
-          <div class="payid">
-            darren.veeranan@gmail.com
-          </div>
-
-          <button onclick="copyPayID('darren.veeranan@gmail.com', this)">
-            📋 Copy Darren's PayID
-          </button>
-
+          <div class="payee-name">Jade-Wu</div>
+          <div class="payid">jadewcroc@hotmail.com</div>
+          <button onclick="copyPayID('jadewcroc@hotmail.com', this)">📋 Copy Jade-Wu's PayID</button>
         </div>
-
-        <!-- JADE-WU -->
-
-        <div class="payee">
-
-          <div class="payee-name">
-            Jade-Wu
-          </div>
-
-          <div class="payid">
-            jadewcroc@hotmail.com
-          </div>
-
-          <button onclick="copyPayID('jadewcroc@hotmail.com', this)">
-            📋 Copy Jade-Wu's PayID
-          </button>
-
-        </div>
-
-        <!-- INSTRUCTIONS -->
-
         <div class="instructions">
-
           <strong>How to send a gift:</strong><br><br>
-
-          1. Choose either Darren or Jade-Wu above.<br>
-          2. Tap <strong>Copy PayID</strong>.<br>
-          3. Open your banking app and start a payment.<br>
-          4. Select <strong>PayID</strong> as the payment method.<br>
-          5. Paste the PayID and enter your gift amount.<br>
-          6. Before sending, please check that the
-          <strong>recipient name shown by your bank is correct</strong>.
-
+          1. Tap <strong>Copy PayID</strong>.<br>
+          2. Open your banking app and start a payment.<br>
+          3. Select <strong>PayID</strong> as the payment method.<br>
+          4. Paste the PayID and enter your gift amount.<br>
+          5. Before sending, please check that the <strong>recipient name shown by your bank is correct</strong>.
         </div>
-
       </div>
-
-      <div class="footer">
-        Thank you for being part of our special day. ❤️
-      </div>
-
+      <div class="footer">Thank you for being part of our special day. ❤️</div>
     </div>
-
   </div>
-
   <script>
-
     function copyPayID(payID, button) {
-
       navigator.clipboard.writeText(payID).then(function() {
-
         const originalText = button.innerHTML;
-
         button.innerHTML = "✓ PayID Copied!";
         button.classList.add("copied");
-
         setTimeout(function() {
-
           button.innerHTML = originalText;
           button.classList.remove("copied");
-
         }, 2000);
-
       }).catch(function() {
-
         alert("Please copy this PayID manually: " + payID);
-
       });
-
     }
-
   </script>
-
 </body>
 </html>
