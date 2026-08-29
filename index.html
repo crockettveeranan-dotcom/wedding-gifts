@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f8f3ee">
-
   <title>Wedding Gifts | Darren & Jade-Wu</title>
-
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; min-height: 100vh; font-family: Georgia, "Times New Roman", serif; background: linear-gradient(135deg, #faf7f2, #eee4da); color: #3d3530; }
@@ -26,10 +24,17 @@
     button { width: 100%; border: none; border-radius: 9px; padding: 13px; font-size: 15px; cursor: pointer; font-family: Arial,sans-serif; background: #594a40; color: white; transition: opacity .2s ease; }
     button:hover { opacity: .85; }
     .copied { background: #718267; }
+    .bank-section { margin-top: 25px; background: white; border: 1px solid #e4dcd5; border-radius: 14px; padding: 20px; text-align: left; }
+    .bank-title { font-size: 21px; margin-bottom: 14px; }
+    .bank-details { font-family: Arial,sans-serif; font-size: 15px; line-height: 1.8; color: #5c5550; }
+    .bank-row { display: flex; justify-content: space-between; gap: 20px; padding: 7px 0; border-bottom: 1px solid #eee7e1; }
+    .bank-row:last-child { border-bottom: none; }
+    .bank-label { color: #756b64; }
+    .bank-value { font-weight: bold; color: #3d3530; text-align: right; }
     .instructions { margin-top: 25px; padding: 18px; background: #f5eee7; border-radius: 12px; font-family: Arial,sans-serif; font-size: 13px; line-height: 1.7; color: #746b64; text-align: left; }
     .instructions strong { color: #4d433c; }
     .footer { margin-top: 30px; font-size: 15px; font-style: italic; color: #766b63; }
-    @media (max-width:480px) { .container { padding:18px 12px 35px; } .card { padding:30px 16px; } h1 { font-size:31px; } .names { font-size:19px; } }
+    @media (max-width:480px) { .container { padding:18px 12px 35px; } .card { padding:30px 16px; } h1 { font-size:31px; } .names { font-size:19px; } .bank-row { flex-direction: column; gap: 2px; } .bank-value { text-align:left; } }
   </style>
 </head>
 <body>
@@ -39,7 +44,7 @@
       <h1>Wedding Gifts</h1>
       <div class="names">Darren & Jade-Wu</div>
       <div class="divider"></div>
-      <p class="intro">Your presence at our wedding is the greatest gift of all. If you'd like to contribute towards our future together, you can send us a gift securely using PayID.</p>
+      <p class="intro">Your presence at our wedding is the greatest gift of all. If you'd like to contribute towards our future together, you can send us a gift securely using PayID or bank transfer.</p>
       <div class="payid-section">
         <h2>💝 Gift via PayID</h2>
         <div class="subtitle">Use the PayID below.</div>
@@ -48,13 +53,18 @@
           <div class="payid">jadewcroc@hotmail.com</div>
           <button onclick="copyPayID('jadewcroc@hotmail.com', this)">📋 Copy Jade-Wu's PayID</button>
         </div>
+        <div class="bank-section">
+          <div class="bank-title">🏦 Gift via Bank Transfer</div>
+          <div class="bank-details">
+            <div class="bank-row"><span class="bank-label">BSB</span><span class="bank-value">306-511</span></div>
+            <div class="bank-row"><span class="bank-label">Account Number</span><span class="bank-value">9581738</span></div>
+          </div>
+        </div>
         <div class="instructions">
           <strong>How to send a gift:</strong><br><br>
-          1. Tap <strong>Copy PayID</strong>.<br>
-          2. Open your banking app and start a payment.<br>
-          3. Select <strong>PayID</strong> as the payment method.<br>
-          4. Paste the PayID and enter your gift amount.<br>
-          5. Before sending, please check that the <strong>recipient name shown by your bank is correct</strong>.
+          <strong>PayID:</strong> Tap <strong>Copy PayID</strong>, then open your banking app, select PayID, paste the PayID and enter your gift amount.<br><br>
+          <strong>Bank Transfer:</strong> Use the BSB and account number above and enter your gift amount.<br><br>
+          Before sending, please double-check the recipient details shown by your bank are correct.
         </div>
       </div>
       <div class="footer">Thank you for being part of our special day. ❤️</div>
