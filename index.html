@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -28,11 +27,11 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.96);
+      background: rgba(255, 255, 255, 0.96);
       border-radius: 24px;
       padding: 40px 25px;
       text-align: center;
-      box-shadow: 0 12px 40px rgba(70,50,40,0.12);
+      box-shadow: 0 12px 40px rgba(70, 50, 40, 0.12);
     }
 
     .rings {
@@ -120,6 +119,7 @@
       font-family: Arial, sans-serif;
       background: #594a40;
       color: white;
+      transition: opacity 0.2s ease;
     }
 
     button:hover {
@@ -130,39 +130,20 @@
       background: #718267;
     }
 
-    .qr-title {
-      margin-top: 28px;
-      font-size: 20px;
-    }
-
-    .qr {
-      display: inline-block;
-      background: white;
-      padding: 14px;
-      border-radius: 14px;
-      margin-top: 12px;
-      border: 1px solid #e2d8cf;
-    }
-
-    .qr img {
-      width: 190px;
-      height: 190px;
-      display: block;
-    }
-
-    .qr-text {
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      color: #71675f;
-      margin-top: 10px;
-    }
-
     .instructions {
-      margin-top: 22px;
+      margin-top: 25px;
+      padding: 18px;
+      background: #f5eee7;
+      border-radius: 12px;
       font-family: Arial, sans-serif;
       font-size: 13px;
-      line-height: 1.6;
+      line-height: 1.7;
       color: #746b64;
+      text-align: left;
+    }
+
+    .instructions strong {
+      color: #4d433c;
     }
 
     .footer {
@@ -188,111 +169,99 @@
       .names {
         font-size: 19px;
       }
-
-      .qr img {
-        width: 170px;
-        height: 170px;
-      }
     }
   </style>
-
 </head>
 
 <body>
 
   <div class="container">
 
-```
-<div class="card">
+    <div class="card">
 
-  <div class="rings">💍</div>
+      <div class="rings">💍</div>
 
-  <h1>Wedding Gifts</h1>
+      <h1>Wedding Gifts</h1>
 
-  <div class="names">
-    Darren & Jade-Wu
-  </div>
-
-  <div class="divider"></div>
-
-  <p class="intro">
-    Your presence at our wedding is the greatest gift of all.
-    If you'd like to contribute towards our future together,
-    you can send us a gift securely using PayID.
-  </p>
-
-  <div class="payid-section">
-
-    <h2>💝 Gift via PayID</h2>
-
-    <div class="subtitle">
-      Choose either PayID below.
-    </div>
-
-    <div class="payee">
-
-      <div class="payee-name">
-        Darren
+      <div class="names">
+        Darren & Jade-Wu
       </div>
 
-      <div class="payid">
-        darren.veeranan@gmail.com
+      <div class="divider"></div>
+
+      <p class="intro">
+        Your presence at our wedding is the greatest gift of all.
+        If you'd like to contribute towards our future together,
+        you can send us a gift securely using PayID.
+      </p>
+
+      <div class="payid-section">
+
+        <h2>💝 Gift via PayID</h2>
+
+        <div class="subtitle">
+          Choose either PayID below.
+        </div>
+
+        <!-- DARREN -->
+
+        <div class="payee">
+
+          <div class="payee-name">
+            Darren
+          </div>
+
+          <div class="payid">
+            darren.veeranan@gmail.com
+          </div>
+
+          <button onclick="copyPayID('darren.veeranan@gmail.com', this)">
+            📋 Copy Darren's PayID
+          </button>
+
+        </div>
+
+        <!-- JADE-WU -->
+
+        <div class="payee">
+
+          <div class="payee-name">
+            Jade-Wu
+          </div>
+
+          <div class="payid">
+            jadewcroc@hotmail.com
+          </div>
+
+          <button onclick="copyPayID('jadewcroc@hotmail.com', this)">
+            📋 Copy Jade-Wu's PayID
+          </button>
+
+        </div>
+
+        <!-- INSTRUCTIONS -->
+
+        <div class="instructions">
+
+          <strong>How to send a gift:</strong><br><br>
+
+          1. Choose either Darren or Jade-Wu above.<br>
+          2. Tap <strong>Copy PayID</strong>.<br>
+          3. Open your banking app and start a payment.<br>
+          4. Select <strong>PayID</strong> as the payment method.<br>
+          5. Paste the PayID and enter your gift amount.<br>
+          6. Before sending, please check that the
+          <strong>recipient name shown by your bank is correct</strong>.
+
+        </div>
+
       </div>
 
-      <button onclick="copyPayID('darren.veeranan@gmail.com', this)">
-        📋 Copy Darren's PayID
-      </button>
-
-    </div>
-
-    <div class="payee">
-
-      <div class="payee-name">
-        Jade-Wu
-      </div>
-
-      <div class="payid">
-        jadewcrockett@hotmail.com
-      </div>
-
-      <button onclick="copyPayID('jadewcrockett@hotmail.com', this)">
-        📋 Copy Jade-Wu's PayID
-      </button>
-
-    </div>
-
-    <div class="qr-title">
-      📱 Scan to Give a Gift
-    </div>
-
-    <div class="qr">
-
-      <img
-        src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fcrockettveeranan-dotcom.github.io%2Fwedding-gifts%2F"
-        alt="QR code to open wedding gift page"
-      >
-
-      <div class="qr-text">
-        Scan this QR code to open this page
+      <div class="footer">
+        Thank you for being part of our special day. ❤️
       </div>
 
     </div>
-
-    <div class="instructions">
-      After copying the PayID, open your banking app and select
-      PayID as the payment method. Enter the PayID, then check that
-      the recipient name shown by your bank is correct before
-      confirming your gift.
-    </div>
-
-  </div>
-
-  <div class="footer">
-    Thank you for being part of our special day. ❤️
-  </div>
-
-</div>
-```
 
   </div>
 
@@ -308,8 +277,10 @@
         button.classList.add("copied");
 
         setTimeout(function() {
+
           button.innerHTML = originalText;
           button.classList.remove("copied");
+
         }, 2000);
 
       }).catch(function() {
